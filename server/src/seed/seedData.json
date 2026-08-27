@@ -1,0 +1,442 @@
+{
+  "domains": [
+    {
+      "id": "domain_frontend",
+      "name": "Frontend Engineering",
+      "description": "User interface design, web performance, and client-side application architecture.",
+      "color": "#3B82F6"
+    },
+    {
+      "id": "domain_backend",
+      "name": "Backend & Distributed Systems",
+      "description": "Server architecture, API design, data storage, and scalable distributed services.",
+      "color": "#10B981"
+    },
+    {
+      "id": "domain_cloud",
+      "name": "Cloud & DevOps",
+      "description": "Containerization, infrastructure as code, continuous deployment, and platform reliability.",
+      "color": "#F59E0B"
+    },
+    {
+      "id": "domain_ai",
+      "name": "Data Engineering & AI/ML",
+      "description": "Data pipelines, predictive modeling, machine learning frameworks, and neural networks.",
+      "color": "#8B5CF6"
+    }
+  ],
+  "skills": [
+    {
+      "id": "html_css",
+      "name": "HTML & CSS",
+      "category": "Frontend",
+      "description": "Semantic markup, styling, CSS Grid, Flexbox, and responsive web design foundations.",
+      "difficulty": "Beginner",
+      "popularity": 98,
+      "domainId": "domain_frontend"
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript (ES6+)",
+      "category": "Frontend",
+      "description": "Core language mechanics, event loop, asynchronous promises, and DOM manipulation.",
+      "difficulty": "Beginner",
+      "popularity": 99,
+      "domainId": "domain_frontend"
+    },
+    {
+      "id": "typescript",
+      "name": "TypeScript",
+      "category": "Frontend",
+      "description": "Static typing, interfaces, generics, type narrowing, and advanced compiler configurations.",
+      "difficulty": "Intermediate",
+      "popularity": 92,
+      "domainId": "domain_frontend"
+    },
+    {
+      "id": "react",
+      "name": "React",
+      "category": "Frontend",
+      "description": "Component lifecycle, hooks, virtual DOM reconciliation, and state management.",
+      "difficulty": "Intermediate",
+      "popularity": 95,
+      "domainId": "domain_frontend"
+    },
+    {
+      "id": "nextjs",
+      "name": "Next.js",
+      "category": "Frontend",
+      "description": "Server-side rendering, App Router, React Server Components, and static site generation.",
+      "difficulty": "Advanced",
+      "popularity": 88,
+      "domainId": "domain_frontend"
+    },
+    {
+      "id": "tailwind",
+      "name": "Tailwind CSS",
+      "category": "Frontend",
+      "description": "Utility-first CSS styling, design systems, and responsive layout acceleration.",
+      "difficulty": "Beginner",
+      "popularity": 89,
+      "domainId": "domain_frontend"
+    },
+    {
+      "id": "state_management",
+      "name": "State Management (Redux/Zustand)",
+      "category": "Frontend",
+      "description": "Predictable global application state, immutable updates, and middleware.",
+      "difficulty": "Intermediate",
+      "popularity": 81,
+      "domainId": "domain_frontend"
+    },
+    {
+      "id": "cs_fundamentals",
+      "name": "Computer Science Foundations",
+      "category": "Backend",
+      "description": "Data structures, algorithmic complexity (Big-O), memory management, and networking basics.",
+      "difficulty": "Beginner",
+      "popularity": 90,
+      "domainId": "domain_backend"
+    },
+    {
+      "id": "nodejs",
+      "name": "Node.js & Express",
+      "category": "Backend",
+      "description": "Event-driven runtime, asynchronous I/O, RESTful API development, and middleware pipeline.",
+      "difficulty": "Intermediate",
+      "popularity": 91,
+      "domainId": "domain_backend"
+    },
+    {
+      "id": "python_core",
+      "name": "Python Fundamentals",
+      "category": "Backend",
+      "description": "Python syntax, OOP, standard libraries, virtual environments, and package ecosystem.",
+      "difficulty": "Beginner",
+      "popularity": 96,
+      "domainId": "domain_backend"
+    },
+    {
+      "id": "sql_databases",
+      "name": "Relational SQL Databases",
+      "category": "Backend",
+      "description": "Relational schema design, normalization, indexing strategies, transactions, and ACID properties.",
+      "difficulty": "Intermediate",
+      "popularity": 93,
+      "domainId": "domain_backend"
+    },
+    {
+      "id": "graph_databases",
+      "name": "Graph Databases & Cypher",
+      "category": "Backend",
+      "description": "Property graph data modeling, index-free adjacency, and multi-hop Cypher pattern matching with CognoDB.",
+      "difficulty": "Advanced",
+      "popularity": 84,
+      "domainId": "domain_backend"
+    },
+    {
+      "id": "microservices",
+      "name": "Microservices Architecture",
+      "category": "Backend",
+      "description": "Domain-driven design, service discovery, API gateways, message queues, and eventual consistency.",
+      "difficulty": "Advanced",
+      "popularity": 86,
+      "domainId": "domain_backend"
+    },
+    {
+      "id": "redis_caching",
+      "name": "Redis & Distributed Caching",
+      "category": "Backend",
+      "description": "In-memory data structures, caching strategies, rate limiting, and pub/sub messaging.",
+      "difficulty": "Intermediate",
+      "popularity": 85,
+      "domainId": "domain_backend"
+    },
+    {
+      "id": "linux_basics",
+      "name": "Linux & Bash Scripting",
+      "category": "DevOps",
+      "description": "UNIX filesystem, permissions, process management, shell scripting, and system monitoring.",
+      "difficulty": "Beginner",
+      "popularity": 94,
+      "domainId": "domain_cloud"
+    },
+    {
+      "id": "git_vcs",
+      "name": "Git & Version Control",
+      "category": "DevOps",
+      "description": "Branching strategies, interactive rebase, merge conflicts, and GitOps workflows.",
+      "difficulty": "Beginner",
+      "popularity": 99,
+      "domainId": "domain_cloud"
+    },
+    {
+      "id": "docker",
+      "name": "Docker & Containerization",
+      "category": "DevOps",
+      "description": "Container images, Dockerfiles, multi-stage builds, networking, and volumes.",
+      "difficulty": "Intermediate",
+      "popularity": 94,
+      "domainId": "domain_cloud"
+    },
+    {
+      "id": "kubernetes",
+      "name": "Kubernetes Orchestration",
+      "category": "DevOps",
+      "description": "Pods, Deployments, Services, Ingress controllers, ConfigMaps, and cluster scalability.",
+      "difficulty": "Advanced",
+      "popularity": 89,
+      "domainId": "domain_cloud"
+    },
+    {
+      "id": "terraform",
+      "name": "Terraform (IaC)",
+      "category": "DevOps",
+      "description": "Declarative infrastructure as code, state management, providers, and modular cloud provisioning.",
+      "difficulty": "Advanced",
+      "popularity": 82,
+      "domainId": "domain_cloud"
+    },
+    {
+      "id": "ci_cd",
+      "name": "CI/CD Pipelines",
+      "category": "DevOps",
+      "description": "Automated build, test, and deployment workflows with GitHub Actions and GitLab CI.",
+      "difficulty": "Intermediate",
+      "popularity": 87,
+      "domainId": "domain_cloud"
+    },
+    {
+      "id": "math_stats",
+      "name": "Applied Math & Statistics",
+      "category": "AI/ML",
+      "description": "Linear algebra, matrix operations, multivariate calculus, probability distributions, and statistics.",
+      "difficulty": "Intermediate",
+      "popularity": 78,
+      "domainId": "domain_ai"
+    },
+    {
+      "id": "data_analysis",
+      "name": "Data Analysis (Pandas & NumPy)",
+      "category": "AI/ML",
+      "description": "Data wrangling, matrix manipulation, feature engineering, and exploratory data analysis.",
+      "difficulty": "Intermediate",
+      "popularity": 88,
+      "domainId": "domain_ai"
+    },
+    {
+      "id": "machine_learning",
+      "name": "Machine Learning Foundations",
+      "category": "AI/ML",
+      "description": "Supervised/unsupervised algorithms, scikit-learn, loss functions, and model evaluation metrics.",
+      "difficulty": "Intermediate",
+      "popularity": 87,
+      "domainId": "domain_ai"
+    },
+    {
+      "id": "deep_learning",
+      "name": "Deep Learning & PyTorch",
+      "category": "AI/ML",
+      "description": "Neural networks, backpropagation, convolutional and recurrent architectures, GPU training with PyTorch.",
+      "difficulty": "Advanced",
+      "popularity": 85,
+      "domainId": "domain_ai"
+    },
+    {
+      "id": "llm_engineering",
+      "name": "LLMs & Graph RAG",
+      "category": "AI/ML",
+      "description": "Prompt engineering, vector embeddings, Graph RAG with CognoDB, and agentic workflows.",
+      "difficulty": "Advanced",
+      "popularity": 92,
+      "domainId": "domain_ai"
+    }
+  ],
+  "prerequisites": [
+    { "source": "javascript", "target": "html_css", "isMandatory": true, "weight": 1.0 },
+    { "source": "typescript", "target": "javascript", "isMandatory": true, "weight": 1.0 },
+    { "source": "react", "target": "javascript", "isMandatory": true, "weight": 1.0 },
+    { "source": "react", "target": "html_css", "isMandatory": true, "weight": 0.8 },
+    { "source": "nextjs", "target": "react", "isMandatory": true, "weight": 1.0 },
+    { "source": "nextjs", "target": "typescript", "isMandatory": false, "weight": 0.9 },
+    { "source": "state_management", "target": "react", "isMandatory": true, "weight": 0.9 },
+    { "source": "tailwind", "target": "html_css", "isMandatory": true, "weight": 0.8 },
+
+    { "source": "nodejs", "target": "javascript", "isMandatory": true, "weight": 1.0 },
+    { "source": "nodejs", "target": "cs_fundamentals", "isMandatory": false, "weight": 0.7 },
+    { "source": "python_core", "target": "cs_fundamentals", "isMandatory": false, "weight": 0.6 },
+    { "source": "sql_databases", "target": "cs_fundamentals", "isMandatory": true, "weight": 0.8 },
+    { "source": "graph_databases", "target": "sql_databases", "isMandatory": false, "weight": 0.7 },
+    { "source": "graph_databases", "target": "cs_fundamentals", "isMandatory": true, "weight": 0.9 },
+    { "source": "redis_caching", "target": "cs_fundamentals", "isMandatory": true, "weight": 0.7 },
+    { "source": "microservices", "target": "nodejs", "isMandatory": false, "weight": 0.8 },
+    { "source": "microservices", "target": "docker", "isMandatory": true, "weight": 0.9 },
+    { "source": "microservices", "target": "sql_databases", "isMandatory": true, "weight": 0.8 },
+
+    { "source": "docker", "target": "linux_basics", "isMandatory": true, "weight": 1.0 },
+    { "source": "docker", "target": "git_vcs", "isMandatory": false, "weight": 0.6 },
+    { "source": "kubernetes", "target": "docker", "isMandatory": true, "weight": 1.0 },
+    { "source": "kubernetes", "target": "linux_basics", "isMandatory": true, "weight": 0.9 },
+    { "source": "terraform", "target": "linux_basics", "isMandatory": true, "weight": 0.8 },
+    { "source": "ci_cd", "target": "git_vcs", "isMandatory": true, "weight": 1.0 },
+    { "source": "ci_cd", "target": "docker", "isMandatory": false, "weight": 0.8 },
+
+    { "source": "data_analysis", "target": "python_core", "isMandatory": true, "weight": 1.0 },
+    { "source": "data_analysis", "target": "math_stats", "isMandatory": true, "weight": 0.9 },
+    { "source": "machine_learning", "target": "data_analysis", "isMandatory": true, "weight": 1.0 },
+    { "source": "machine_learning", "target": "math_stats", "isMandatory": true, "weight": 1.0 },
+    { "source": "deep_learning", "target": "machine_learning", "isMandatory": true, "weight": 1.0 },
+    { "source": "deep_learning", "target": "python_core", "isMandatory": true, "weight": 0.9 },
+    { "source": "llm_engineering", "target": "deep_learning", "isMandatory": false, "weight": 0.8 },
+    { "source": "llm_engineering", "target": "graph_databases", "isMandatory": false, "weight": 0.85 },
+    { "source": "llm_engineering", "target": "python_core", "isMandatory": true, "weight": 0.9 }
+  ],
+  "related": [
+    { "source": "react", "target": "tailwind", "strength": 0.9 },
+    { "source": "react", "target": "typescript", "strength": 0.95 },
+    { "source": "nextjs", "target": "tailwind", "strength": 0.88 },
+    { "source": "nodejs", "target": "typescript", "strength": 0.85 },
+    { "source": "docker", "target": "redis_caching", "strength": 0.75 },
+    { "source": "kubernetes", "target": "terraform", "strength": 0.92 },
+    { "source": "graph_databases", "target": "llm_engineering", "strength": 0.94 },
+    { "source": "microservices", "target": "redis_caching", "strength": 0.87 }
+  ],
+  "developers": [
+    {
+      "id": "dev_alex",
+      "name": "Alex Chen",
+      "title": "Junior Frontend Developer",
+      "experienceYears": 2,
+      "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=alex",
+      "skills": [
+        { "skillId": "html_css", "level": "Expert", "years": 2 },
+        { "skillId": "javascript", "level": "Intermediate", "years": 2 },
+        { "skillId": "react", "level": "Intermediate", "years": 1 },
+        { "skillId": "tailwind", "level": "Intermediate", "years": 1 },
+        { "skillId": "git_vcs", "level": "Intermediate", "years": 2 }
+      ]
+    },
+    {
+      "id": "dev_priya",
+      "name": "Priya Sharma",
+      "title": "Backend Systems Engineer",
+      "experienceYears": 4,
+      "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=priya",
+      "skills": [
+        { "skillId": "cs_fundamentals", "level": "Expert", "years": 4 },
+        { "skillId": "python_core", "level": "Expert", "years": 4 },
+        { "skillId": "sql_databases", "level": "Expert", "years": 4 },
+        { "skillId": "nodejs", "level": "Intermediate", "years": 3 },
+        { "skillId": "redis_caching", "level": "Intermediate", "years": 2 },
+        { "skillId": "linux_basics", "level": "Intermediate", "years": 3 },
+        { "skillId": "docker", "level": "Intermediate", "years": 2 },
+        { "skillId": "git_vcs", "level": "Expert", "years": 4 }
+      ]
+    },
+    {
+      "id": "dev_marcus",
+      "name": "Marcus Vance",
+      "title": "Junior DevOps Engineer",
+      "experienceYears": 2,
+      "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=marcus",
+      "skills": [
+        { "skillId": "linux_basics", "level": "Expert", "years": 2 },
+        { "skillId": "git_vcs", "level": "Expert", "years": 2 },
+        { "skillId": "docker", "level": "Intermediate", "years": 2 },
+        { "skillId": "ci_cd", "level": "Intermediate", "years": 1 }
+      ]
+    },
+    {
+      "id": "dev_elena",
+      "name": "Elena Rostova",
+      "title": "Full-Stack Engineer",
+      "experienceYears": 5,
+      "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=elena",
+      "skills": [
+        { "skillId": "html_css", "level": "Expert", "years": 5 },
+        { "skillId": "javascript", "level": "Expert", "years": 5 },
+        { "skillId": "typescript", "level": "Expert", "years": 4 },
+        { "skillId": "react", "level": "Expert", "years": 4 },
+        { "skillId": "nextjs", "level": "Intermediate", "years": 2 },
+        { "skillId": "nodejs", "level": "Expert", "years": 4 },
+        { "skillId": "sql_databases", "level": "Intermediate", "years": 3 },
+        { "skillId": "docker", "level": "Intermediate", "years": 3 },
+        { "skillId": "git_vcs", "level": "Expert", "years": 5 }
+      ]
+    },
+    {
+      "id": "dev_david",
+      "name": "David Kim",
+      "title": "Data Scientist",
+      "experienceYears": 3,
+      "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=david",
+      "skills": [
+        { "skillId": "python_core", "level": "Expert", "years": 3 },
+        { "skillId": "math_stats", "level": "Expert", "years": 3 },
+        { "skillId": "data_analysis", "level": "Expert", "years": 3 },
+        { "skillId": "machine_learning", "level": "Intermediate", "years": 2 },
+        { "skillId": "git_vcs", "level": "Intermediate", "years": 2 }
+      ]
+    }
+  ],
+  "jobRoles": [
+    {
+      "id": "role_lead_fullstack",
+      "title": "Lead Full-Stack Architect",
+      "department": "Product Engineering",
+      "targetLevel": "Staff / Lead",
+      "requiredSkills": [
+        { "skillId": "typescript", "importance": "Core" },
+        { "skillId": "react", "importance": "Core" },
+        { "skillId": "nextjs", "importance": "Core" },
+        { "skillId": "nodejs", "importance": "Core" },
+        { "skillId": "graph_databases", "importance": "Core" },
+        { "skillId": "docker", "importance": "Core" },
+        { "skillId": "microservices", "importance": "Nice-to-have" }
+      ]
+    },
+    {
+      "id": "role_cloud_architect",
+      "title": "Cloud Platform & DevOps Architect",
+      "department": "Core Infrastructure",
+      "targetLevel": "Senior",
+      "requiredSkills": [
+        { "skillId": "linux_basics", "importance": "Core" },
+        { "skillId": "docker", "importance": "Core" },
+        { "skillId": "kubernetes", "importance": "Core" },
+        { "skillId": "terraform", "importance": "Core" },
+        { "skillId": "ci_cd", "importance": "Core" },
+        { "skillId": "microservices", "importance": "Nice-to-have" }
+      ]
+    },
+    {
+      "id": "role_senior_backend",
+      "title": "Senior Distributed Backend Specialist",
+      "department": "Platform Services",
+      "targetLevel": "Senior",
+      "requiredSkills": [
+        { "skillId": "cs_fundamentals", "importance": "Core" },
+        { "skillId": "sql_databases", "importance": "Core" },
+        { "skillId": "graph_databases", "importance": "Core" },
+        { "skillId": "microservices", "importance": "Core" },
+        { "skillId": "redis_caching", "importance": "Core" },
+        { "skillId": "docker", "importance": "Core" }
+      ]
+    },
+    {
+      "id": "role_ai_engineer",
+      "title": "AI & Graph RAG Platform Engineer",
+      "department": "Applied AI Research",
+      "targetLevel": "Senior",
+      "requiredSkills": [
+        { "skillId": "python_core", "importance": "Core" },
+        { "skillId": "machine_learning", "importance": "Core" },
+        { "skillId": "deep_learning", "importance": "Core" },
+        { "skillId": "graph_databases", "importance": "Core" },
+        { "skillId": "llm_engineering", "importance": "Core" },
+        { "skillId": "docker", "importance": "Nice-to-have" }
+      ]
+    }
+  ]
+}
+
