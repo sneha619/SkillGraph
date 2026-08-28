@@ -483,7 +483,7 @@ sequenceDiagram
 
 - **Live Hosted Application:** [https://skill-graph-rho-eight.vercel.app/]
 - **Interactive Backend API:** [https://skillgraph-api.onrender.com]
-- **Loom / YouTube Video Walkthrough:** [https://www.youtube.com/watch?v=placeholder](https://www.youtube.com/watch?v=placeholder) *(Insert 3-5 min video recording)*
+- **Loom / YouTube Video Walkthrough:** [[https://www.youtube.com/watch?v=placeholder]
 
 ---
 
