@@ -481,7 +481,7 @@ sequenceDiagram
 
 ## 🌐 18. Hosted Demo & Video Walkthrough
 
-- **Live Hosted Application:** [https://skillgraph-demo.onrender.com](https://skillgraph-demo.onrender.com) *(Insert deployed URL)*
+- **Live Hosted Application:** [https://skillgraph-demo.onrender.com]([https://skillgraph-demo.onrender.com](https://skill-graph-rho-eight.vercel.app/skills/Node.js)) *(Insert deployed URL)*
 - **Interactive Backend API:** [https://skillgraph-api.onrender.com](https://skillgraph-api.onrender.com) *(Insert deployed API URL)*
 - **Loom / YouTube Video Walkthrough:** [https://www.youtube.com/watch?v=placeholder](https://www.youtube.com/watch?v=placeholder) *(Insert 3-5 min video recording)*
 
