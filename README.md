@@ -6,7 +6,7 @@
 [![Frontend](https://img.shields.io/badge/Frontend-React%2018%20%7C%20Vite%20%7C%20TailwindCSS-06b6d4.svg)](https://react.dev)
 [![License](https://img.shields.io/badge/License-MIT-9333ea.svg)](LICENSE)
 
-> Built for the **Wexa AI CognoDB Graph Database Take-Home Assignment**.
+> Built for the **Wexa AI CognoDB Graph Database Take-Home Assignment**. 
 
 ---
 
@@ -458,24 +458,6 @@ sequenceDiagram
 - **UI Resilience:** Loading skeletons, empty states with one-click suggestions, and retryable error cards prevent UI crashes.
 
 ---
-
-## 📸 17. Screenshots
-
-### 1. Global Graph Search & Multi-Entity Exploration
-![Global Graph Search](https://raw.githubusercontent.com/placeholder/SkillGraph/main/screenshots/01_home_search.png)
-*Figure 1: Global multi-entity search across Developers, Skills, Projects, and Companies.*
-
-### 2. Developer Profile & Verified Production Skills
-![Developer Profile](https://raw.githubusercontent.com/placeholder/SkillGraph/main/screenshots/02_developer_profile.png)
-*Figure 2: Developer view showing verified competencies, production project deployments, and multi-hop prerequisites.*
-
-### 3. Collaborative Graph: Related Developers (Jaccard Similarity)
-![Related Developers](https://raw.githubusercontent.com/placeholder/SkillGraph/main/screenshots/03_related_developers.png)
-*Figure 3: Related developers ranked by skill overlap and Jaccard similarity index.*
-
-### 4. Skill Topology & Ecosystem Prerequisites
-![Skill Topology](https://raw.githubusercontent.com/placeholder/SkillGraph/main/screenshots/04_skill_topology.png)
-*Figure 4: Skill detail page detailing direct prerequisites (`[REQUIRES]`), related skills (`[RELATED_TO]`), and talent density.*
 
 ---
 
