@@ -10,9 +10,17 @@ import {
   RoleItem,
   SkillGapAnalysisData,
   SystemHealth,
+  CompanyItem,
+  ProjectItem,
+  SkillListItem,
+  DeveloperListItem,
 } from '../types';
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_BASE = (() => {
+  const raw = (import.meta.env.VITE_API_URL as string | undefined) ?? '/api';
+  // Strip any trailing slash so endpoints always join cleanly.
+  return raw.endsWith('/') ? raw.slice(0, -1) : raw;
+})();
 
 async function request<T>(endpoint: string, options?: RequestInit): Promise<T> {
   const url = `${API_BASE}${endpoint}`;
@@ -108,4 +116,17 @@ export const api = {
     request<{ success: boolean; stats: any; message: string }>('/seed', {
       method: 'POST',
     }),
+
+  // 11. Dashboard / Listing endpoints
+  listDevelopers: (): Promise<DeveloperListItem[]> =>
+    request<DeveloperListItem[]>('/developers'),
+
+  listSkills: (): Promise<SkillListItem[]> =>
+    request<SkillListItem[]>('/skills'),
+
+  listCompanies: (): Promise<CompanyItem[]> =>
+    request<CompanyItem[]>('/graph/companies'),
+
+  listProjects: (): Promise<ProjectItem[]> =>
+    request<ProjectItem[]>('/graph/projects'),
 };

@@ -58,7 +58,7 @@ SkillGraph solves this by turning developer capabilities and technology prerequi
 2. **Developer Profile & Verification:** Shows verified skills with proficiency levels and production projects where skills were deployed in production.
 3. **Collaborative Recommendations (Related Developers):** Computes tripartite graph co-occurrence `(:Developer)-[:KNOWS_SKILL]->(:Skill)<-[:KNOWS_SKILL]-(:Developer)` and ranks overlapping engineers by **Jaccard Similarity Index**.
 4. **Multi-Hop Dependency Traversal:** Traverses `(:Developer)-[:WORKED_ON]->(:Project)-[:USES_SKILL]->(:Skill)-[:REQUIRES*1..3]->(:Prerequisite)` to map the transitive knowledge base of any project.
-5. **Skill Topology & Ecosystem Exploration:** Explores immediate prerequisites (`[:REQUIRES]`), lateral affinities (`[:RELATED_TO]`), and talent density per skill.
+5. **Skill Topology & Ecosystem Exploration:** Explores immediate prerequisites (`[REQUIRES]`), lateral affinities (`[RELATED_TO]`), and talent density per skill.
 6. **Career Gap & Roadmap Analysis:** Compares acquired developer skills against target role profiles to uncover unfulfilled prerequisites and prioritize learning paths.
 
 ---
@@ -475,7 +475,7 @@ sequenceDiagram
 
 ### 4. Skill Topology & Ecosystem Prerequisites
 ![Skill Topology](https://raw.githubusercontent.com/placeholder/SkillGraph/main/screenshots/04_skill_topology.png)
-*Figure 4: Skill detail page detailing direct prerequisites (`[:REQUIRES]`), related skills (`[:RELATED_TO]`), and talent density.*
+*Figure 4: Skill detail page detailing direct prerequisites (`[REQUIRES]`), related skills (`[RELATED_TO]`), and talent density.*
 
 ---
 

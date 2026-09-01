@@ -170,3 +170,53 @@ export interface SystemHealth {
   serverAgent?: string;
   error?: string;
 }
+
+export interface CompanyItem {
+  name: string;
+  industry?: string;
+  location?: string;
+  employeesCount?: number;
+  rolesCount?: number;
+}
+
+export interface ProjectItem {
+  name: string;
+  description?: string;
+  status?: string;
+  skills: Array<{
+    name: string;
+    category?: string;
+    difficulty?: string;
+  }>;
+  contributors: Array<{
+    developerName: string;
+    roleOnProject: string;
+  }>;
+}
+
+export interface SkillListItem {
+  id: string;
+  name: string;
+  category: string;
+  difficulty?: string;
+  description?: string;
+  popularity?: number;
+  domain?: string;
+  domainColor?: string;
+}
+
+export interface DeveloperListItem {
+  id: string;
+  name: string;
+  title: string;
+  experienceYears: number;
+  avatar?: string;
+  skills: Array<{
+    id: string;
+    name: string;
+    level?: string;
+    years?: number;
+    category?: string;
+    difficulty?: string;
+  }>;
+}

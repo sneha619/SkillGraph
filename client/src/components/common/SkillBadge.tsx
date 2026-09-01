@@ -6,6 +6,7 @@ interface SkillBadgeProps {
   category?: string;
   difficulty?: 'Beginner' | 'Intermediate' | 'Advanced';
   proficiency?: 'Beginner' | 'Intermediate' | 'Expert';
+  yearsOfExperience?: number;
   clickable?: boolean;
   size?: 'sm' | 'md';
 }
@@ -15,6 +16,7 @@ export const SkillBadge: React.FC<SkillBadgeProps> = ({
   category,
   difficulty,
   proficiency,
+  yearsOfExperience,
   clickable = true,
   size = 'md',
 }) => {
@@ -40,8 +42,16 @@ export const SkillBadge: React.FC<SkillBadgeProps> = ({
     >
       <span className="w-1.5 h-1.5 rounded-full bg-current opacity-80" />
       <span>{name}</span>
-      {proficiency && (
+      {proficiency && yearsOfExperience !== undefined && yearsOfExperience !== null && (
+        <span className="text-[10px] opacity-70 font-normal">
+          ({proficiency} • {yearsOfExperience}y)
+        </span>
+      )}
+      {proficiency && (yearsOfExperience === undefined || yearsOfExperience === null) && (
         <span className="text-[10px] opacity-70 font-normal">({proficiency})</span>
+      )}
+      {!proficiency && yearsOfExperience !== undefined && yearsOfExperience !== null && (
+        <span className="text-[10px] opacity-70 font-normal">({yearsOfExperience}y)</span>
       )}
     </span>
   );

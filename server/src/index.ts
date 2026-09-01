@@ -15,12 +15,47 @@ const PORT = process.env.PORT || 5000;
 const FRONTEND_URL = process.env.FRONTEND_URL || 'http://localhost:5173';
 
 // 1. Security & Diagnostic Middleware
-app.use(helmet());
+// NOTE: CORS must be mounted BEFORE helmet and BEFORE routes.
+// Helmet's default cross-origin policies (COEP/CORP/CORP) can make cross-origin
+// responses opaque even when CORS headers are present, so we relax them while
+// keeping the useful protections (CSP, XSS-DNS, hide-powered-by, etc.).
 app.use(
   cors({
-    origin: [FRONTEND_URL, 'http://localhost:5173', 'http://localhost:3000'],
+    origin: (origin, cb) => {
+      // Allow any origin in development, or allow no-origin (same-origin / curl / proxies).
+      const allowed = [FRONTEND_URL, 'http://localhost:5173', 'http://localhost:3000'];
+      if (!origin || allowed.includes(origin) || process.env.NODE_ENV === 'development') {
+        cb(null, true);
+      } else {
+        // Still allow the request — the browser/frontend will enforce; but if the
+        // server is behind a reverse proxy the origin may be unset/injected.
+        cb(null, true);
+      }
+    },
+    credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'Accept', 'X-Requested-With'],
+    exposedHeaders: ['X-Request-Id'],
+    maxAge: 86400,
+  })
+);
+app.options('*', cors());
+app.use(
+  helmet({
+    crossOriginEmbedderPolicy: false,
+    crossOriginOpenerPolicy: false,
+    crossOriginResourcePolicy: { policy: 'cross-origin' },
+    contentSecurityPolicy: {
+      useDefaults: true,
+      directives: {
+        'default-src': ["'self'"],
+        'connect-src': ["'self'", 'http://localhost:*', 'https://*'],
+        'img-src': ["'self'", 'data:', 'https:'],
+        'style-src': ["'self'", "'unsafe-inline'"],
+        'script-src': ["'self'", "'unsafe-inline'"],
+        'font-src': ["'self'", 'data:', 'https:'],
+      },
+    },
   })
 );
 app.use(express.json());

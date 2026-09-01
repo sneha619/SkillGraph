@@ -81,7 +81,7 @@ export const CYPHER_QUERIES = {
   RECOMMEND_RELATED_SKILLS: `
     MATCH (target:Skill {id: $skillId})<-[:PROFICIENT_IN]-(d:Developer)-[:PROFICIENT_IN]->(rec:Skill)
     WHERE rec.id <> $skillId
-      AND NOT (target)-[:REQUIRES]->(rec)
+      AND NOT (target)-[REQUIRES]->(rec)
     WITH rec, count(DISTINCT d) AS coOccurrenceScore
     ORDER BY coOccurrenceScore DESC, rec.popularity DESC
     RETURN rec.id AS id,
@@ -160,5 +160,38 @@ export const CYPHER_QUERIES = {
            d.color AS color,
            count(s) AS skillCount
     ORDER BY d.name ASC;
+  `,
+
+  /**
+   * List all companies with stats
+   */
+  LIST_ALL_COMPANIES: `
+    MATCH (c:Company)
+    OPTIONAL MATCH (c)<-[:WORKS_AT]-(d:Developer)
+    OPTIONAL MATCH (c)-[:HIRES_ROLE]->(r:Role)
+    RETURN c.name AS name,
+           c.industry AS industry,
+           c.location AS location,
+           count(DISTINCT d) AS employeesCount,
+           count(DISTINCT r) AS rolesCount
+    ORDER BY c.name ASC;
+  `,
+
+  /**
+   * List all projects with skills and contributors
+   */
+  LIST_ALL_PROJECTS: `
+    MATCH (p:Project)
+    OPTIONAL MATCH (p)-[:USES_SKILL]->(s:Skill)
+    OPTIONAL MATCH (d:Developer)-[wo:WORKED_ON]->(p)
+    RETURN p.name AS name,
+           p.description AS description,
+           p.status AS status,
+           s.name AS skillName,
+           s.category AS skillCategory,
+           s.difficulty AS skillDifficulty,
+           d.name AS developerName,
+           wo.role AS roleOnProject
+    ORDER BY p.name ASC;
   `
 };

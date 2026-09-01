@@ -30,7 +30,68 @@
 /* Glowing dot grid background */
 .bg-grid-pattern {
   background-size: 32px 32px;
-  background-image: 
+  background-image:
     radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+/* Smooth native scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Subtle fade-in + lift animation for page sections */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeInUp 450ms ease-out both;
+  will-change: transform, opacity;
+}
+
+.animate-in.delay-1 {
+  animation-delay: 60ms;
+}
+.animate-in.delay-2 {
+  animation-delay: 120ms;
+}
+.animate-in.delay-3 {
+  animation-delay: 180ms;
+}
+.animate-in.delay-4 {
+  animation-delay: 240ms;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .animate-in {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Visible focus ring accessibility */
+:focus-visible {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Selection color that matches the emerald accent theme */
+::selection {
+  background: rgba(16, 185, 129, 0.25);
+  color: #ecfdf5;
 }
 

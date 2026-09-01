@@ -136,7 +136,7 @@ export async function seedGraphDatabase(): Promise<{ success: boolean; stats: Se
       await runWriteQuery(
         `MATCH (a:Skill {name: $from})
          MATCH (b:Skill {name: $to})
-         MERGE (a)-[:REQUIRES]->(b)`,
+         MERGE (a)-[REQUIRES]->(b)`,
         { from: edge.from, to: edge.to }
       );
     } else {
